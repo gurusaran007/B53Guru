@@ -1,0 +1,283 @@
+1. Print Odd Numbers using Anonymous function
+
+var printOddnumber  = function ( arr1){
+    
+                     var arr2= [0,0];
+                     var j=0;
+                        for(let i=0; i<arr1.length; i++)
+                         {
+                                if(arr1[i]%2!=0)
+                                {
+                                   arr2[j] = arr1[i];
+                                   j++;
+                                }
+                               
+                          }
+                          return arr2;
+                        };
+                                                         
+                            
+var arr = userInput;
+    
+console.log(printOddnumber(arr));
+
+
+2. print String title caps
+
+var printTitleCaps  = function ( arr1){
+    
+    
+         var arr2 = [0,0];
+        
+                     
+                     
+                        for(let i=0; i<arr1.length; i++)
+                         {
+                              arr2[i] =  arr1[i].charAt(0). toUpperCase();
+                               
+                          }
+                          return [ arr2 ];
+                        };
+                                
+     var sar = userInput;                           
+     console.log(printTitleCaps(sar));
+
+
+
+
+
+
+3. Sum of all numbers in an array
+
+
+var printArraySum  = function ( arr){
+    
+    var sum =0;
+    
+                        for(let i=0; i<arr.length; i++)
+                         {     
+                               sum = sum+arr[i];
+                          }
+                          return sum;
+                        };
+                                
+ var arr = [0,0];                    
+                            
+for(let i=0;i<userInput.length;i++)
+{
+    arr[i] = +(userInput[i]); 
+}
+    
+console.log(printArraySum(arr));
+
+});
+
+
+4.  Prime number or not:
+
+
+var arr = [10,20,17,19];
+
+
+function primeNum(num)
+{
+    var arr1=[0,0];
+    var k=0;
+    for(let i=0;i<num.length;i++)
+    
+    {
+        if(num[i]>1)
+        {
+            for(let j=2;j<=num[i]/2;j++)
+        {
+            if(num[i]%j==0)
+            {
+                 break;
+            }
+          else
+         {
+        if(arr1[k-1]!=num[i])
+        {
+            arr1[k]=num[i];
+            k++;
+            }
+                 
+        }
+            
+            
+        }
+       
+    }
+    
+    
+    
+}
+    return [arr1];
+}console.log(primeNum(arr));
+
+
+5. Palindrome
+
+var arr = [555,222];
+
+function foo(arr1)
+{
+  let remainder=0;
+  
+  let k =0;
+  var num=0;
+  var arr1 = [0,0];
+  let t=0;
+  for(let i=0;i<arr.length;i++)
+  {
+    num=arr[i];
+    let sum=0;
+    while(num>1)
+    {
+      remainder = num%10;
+      
+      sum = sum*10+remainder;
+      
+      t = parseInt(num/10);
+      num = t;
+      
+    }
+    num=0;
+    if(sum==arr[i])
+    {
+      arr1[k] = arr[i];
+      k++;
+    }
+  }
+  return [arr1];
+}console.log(foo(arr));
+
+6. Median sorted array:
+
+var arr = [10,20,30,60,70,100,120];
+var arr1 = [10,20,30,60,70,80,90,100];
+var value;
+var value1;
+function medEx(arr,arr1)
+{
+  var len = arr.length;
+  var len1 = arr1.length;
+  
+  if(len%2!=0)
+  {
+    
+   value = Math.round(len/2);
+   for(let i=1;i<=value;i++)
+   {
+     if(i==value)
+     {
+       var ans = arr[i-1];
+     }
+   }
+  }
+  
+  if(len1%2==0)
+  {
+    value1 = ((((len/2)+(len/2)+1)/2));
+    console.log(value1);
+     for(let i=1;i<=value1;i++)
+   {
+     if(i==value1)
+     {
+       var ans1 =  arr[i];
+     }
+   }
+    return[ans,ans1];            
+  }  
+                  
+    
+}console.log(medEx(arr,arr1));
+
+
+
+7. Duplicate Array:
+
+var arr = [0,0];
+for(let i=0;i<userInput.length;i++)
+{
+    arr[i] = +(userInput[i]);
+   
+    
+}
+
+
+function remove(arr1)
+{
+    
+  for(let i=0;i<arr1.length;i++)
+  {
+    for(let j=i+1;j<arr1.length;j++)
+    {
+      if(arr1[i]==arr1[j])
+      {
+         arr1.splice(j,1);
+        
+      }
+    }
+    
+  }
+  return ( arr1);
+         
+    
+}console.log(remove(arr));
+});
+
+
+8. Rotate array k times
+var arr = [10,20,30,40,50,60];
+var arr1 = [80,90,100,50,60,70];
+var k =3;
+
+
+function clockRotate(arr,k)
+{
+  let temp = [0,0];
+  let j=0;
+  let n = arr.length;
+  for(let i=k;i<n;i++)
+  {
+    temp[j] = arr[i];
+    
+    j++;
+  }
+  
+  for(let s= 0;s<k;s++)
+  {
+    temp[j]= arr[s];
+    j++;
+    
+  }
+  arr=temp;
+  return arr;
+         
+    
+}console.log(clockRotate(arr,k));
+
+function antiClockRotate(arr,k)
+{
+  let temp = [0,0];
+  let j=0;
+  let n = arr.length;
+  for(let i=n-k;i<n;i++)
+  {
+    temp[j] = arr[i];
+    
+    j++;
+  }
+  
+  for(let s= 0;s<n-k;s++)
+  {
+    temp[j]= arr[s];
+    j++;
+    
+  }
+  arr1=temp;
+  return arr1;
+         
+    
+}console.log(antiClockRotate(arr1,k));
