@@ -1,0 +1,93 @@
+1.class Movie{
+  constructor(title,studio,rating)
+  {
+    this.title = title;
+    this.studio = studio;
+    if(rating == null)
+    {
+      this.rating = "PG";
+    }
+    else
+    {
+      this.rating = rating;
+    }
+    
+  }
+  getPG(movieNames)
+  {
+    var temp = [];
+    for(let i=0;i<movieNames.length;i++)
+    {
+      if(movieNames[i].rating == "PG")
+      {
+        temp.push(movieNames[i].name);
+      }
+    }
+    return temp;
+  }
+}
+var movieN = new Movie("Casino Royale","Eon Productions","PG13");
+var arr1 = [{name:"ghilli",studio:"GHJ productions",rating:"PG"},{name:"Thupaki",studio:"FTG productions",rating:"PG"},{name:"Leo",studio:"HJK productions",rating:"PG"},{name:"Nanban",studio:"BGH productions",rating:"PG13"}];
+console.log(movieN.getPG(arr1));
+
+
+2. class Circle{
+  
+  constructor(radius,colour)
+  {
+    this.radius = radius;
+    this.colour = colour;
+  }
+  getColour()
+  {
+    return this.colour;
+  }
+  getArea()
+  {
+    return 3.14*this.radius*this.radius;
+  }
+  getCircumference()
+  {
+    return 2*3.14*this.radius;
+  }
+}
+var circle = new Circle(4,"red");
+console.log(circle.getColour());
+console.log(circle.getArea());
+console.log(circle.getCircumference());
+
+3. class Person{
+  
+  constructor(name,regno,emailId,address)
+  {
+    this.name = name;
+    this.regno = regno;
+    this.emailId = emailId;
+    this.address = address;
+  }
+  getNameandRegNo()
+  {
+    return ( `the name of the person ${this.name} and the reg no is ${this.regno} `);
+  }
+  
+}
+var person = new Person("Guru","7777","gilliguru1998@gmail.com","karur Tamilnadu-India");
+console.log(person.getNameandRegNo());
+
+
+4.calculate uber price
+
+class CalculateUberPrice{
+  
+  constructor(distance)
+  {
+    this.distance = distance;
+  }
+  getAmount()
+  {
+    return ( `the amount of ${this.distance} is ${this.distance*13}`);
+  }
+  
+}
+var price = new CalculateUberPrice(20);
+console.log(price.getAmount());
