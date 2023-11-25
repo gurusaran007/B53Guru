@@ -1,0 +1,18 @@
+request.onload = function(){
+var res = JSON.parse(request.response);
+console.log(res);
+
+var conti = res.filter((ele) => ele.continents == "Asia")
+console.log(conti);
+
+var pop_countries = res.filter((ele) => ele.population<200000)
+console.log(pop_countries);
+
+
+res.forEach((ele)=>console.log(ele.name,ele.capital,ele.flag));
+
+var res1 = res.reduce((acc,cv) => acc+cv.population,0 );
+console.log(res1);
+
+var res2 = res.filter((ele) => ele.currencies == "US dollar");
+console.log(res2);
